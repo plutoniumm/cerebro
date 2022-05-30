@@ -1,0 +1,19 @@
+{
+	"name": "my-app",
+	"version": "0.0.1",
+	"scripts": {
+		"clean": "rm -rf .svelte* && clear",
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"deploy": "sh ./scripts/deploy.sh",
+		"git": "sh ./scripts/git.sh"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "next",
+		"svelte": "^3.46.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.0-next.33"
+	}
+}
