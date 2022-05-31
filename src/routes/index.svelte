@@ -2,24 +2,28 @@
 </script>
 
 <script>
+	import Filter from "@com:gen/filter.svelte";
+
+	const tags = [
+		{ value: "Everything", color: "black" },
+		{ value: "System Design", color: "ui:blue" },
+		{ value: "Decision Tree", color: "ui:green" },
+		{ value: "Problem Solving", color: "ui:purple" },
+		{ value: "Communication", color: "ui:orange" },
+	];
+
+	let filter = 0;
 </script>
 
 <section>
-	<h1>
-		to your new<br />SvelteKit app
-	</h1>
+	<div>
+		<Filter {tags} bind:filter />
+	</div>
+	{tags[filter].value}
 </section>
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
+		margin-top: 5rem;
 	}
 </style>

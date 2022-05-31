@@ -1,25 +1,19 @@
+import sveltePreprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-static';
-import path from 'path'; AbortSignal
+import { replaceCodePlugin } from "vite-plugin-replace";
+import { UIAliases, PathAliases } from "./paths.config.js";
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
+	preprocess: sveltePreprocess( { sourceMap: false } ),
 	kit: {
 		adapter: adapter(),
 		vite: {
-			resolve: {
-				alias: {
-					// these are the aliases and paths to them
-					'@com:top': path.resolve( './src/components/global' ),
-					'@com:lib': path.resolve( './src/components/lib' ),
-					'@com:gen': path.resolve( './src/components/gen' )
-				}
-			},
-			server: {
-				fs: {
-					// Allow serving files from one level up to the project root
-					allow: [ 'static' ]
-				}
-			}
+			resolve: { alias: { ...PathAliases } },
+			plugins: [ replaceCodePlugin( { replacements: [ ...UIAliases ] } ), ],
+			server: { fs: { allow: [ 'static' ] } }
+		},
+		prerender: {
+			default: true
 		}
 	}
 };
