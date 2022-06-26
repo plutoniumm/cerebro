@@ -10,6 +10,7 @@ const objectify = ( paths ) => {
 // Add All UI Aliases
 // Will be replaced as $UI:FROM$ -> $TO$
 export const UIAliases = [
+    [ 'transparent/orange', 'rgba(224,130,47,.1)' ],
     [ 'orange', '#e0822f' ],
     [ 'red', '#faa' ],
 
@@ -25,6 +26,7 @@ export const UIAliases = [
 
 // Standard Path replacements
 export const PathAliases = {
+    '@data': path.resolve( './src/data' ),
     '@com:top': path.resolve( './src/components/global' ),
     '@com:lib': path.resolve( './src/components/lib' ),
     '@com:gen': path.resolve( './src/components/gen' )

@@ -1,38 +1,28 @@
 <script>
+    import tags from "@data/tags.json";
+    import { colorChange } from "$lib/process";
+
     export let //
-        text = "Button",
-        color = "#afa";
+        text = "all";
 
-    import { createEventDispatcher } from "svelte";
-
-    const dispatcher = createEventDispatcher();
-
-    const dispatchData = () =>
-        dispatcher("click", {
-            event: "click",
-            component: "Button",
-            value: text,
-        });
+    const { value, color } = tags.find((current) => current.id === text);
 </script>
 
-<button class="rx5 fw5" on:click={dispatchData} style="--col:{color}">
-    {text}
-</button>
+<div
+    class="rx5 tag fw5"
+    style={`--col:${color};--bg:${colorChange.lighten(color, 0.33, 0.5)}`}
+>
+    {value}
+</div>
 
 <style lang="scss">
-    button {
-        min-width: 100px;
-        font-size: 1.2rem;
+    .tag {
+        font-size: 0.8rem;
+        display: inline;
+        min-width: 50px;
         text-transform: uppercase;
-        background: transparent;
-        border: 2px solid var(--col);
+        background: var(--bg);
         color: var(--col);
-        cursor: pointer;
         padding: 5px 10px;
-        transition: all 0.1s ease;
-        &:hover {
-            background: var(--col);
-            color: #fff;
-        }
     }
 </style>

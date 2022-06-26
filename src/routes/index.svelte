@@ -2,24 +2,26 @@
 </script>
 
 <script>
-	import Filter from "@com:gen/filter.svelte";
+	import Card from "@com:lib/card.svelte";
 
-	const tags = [
-		{ value: "Everything", color: "black" },
-		{ value: "System Design", color: "ui:blue" },
-		{ value: "Decision Tree", color: "ui:green" },
-		{ value: "Problem Solving", color: "ui:purple" },
-		{ value: "Communication", color: "ui:orange" },
-	];
+	import Filter from "@com:gen/filter.svelte";
+	import tags from "@data/tags.json";
+
+	import methods from "@data/methods.json";
 
 	let filter = 0;
 </script>
 
 <section>
-	<div>
-		<Filter {tags} bind:filter />
+	<Filter {tags} bind:filter />
+	<!-- VALUE: {tags[filter].value} -->
+</section>
+<section>
+	<div class="ƒ ƒ∑ ∆-ar">
+		{#each methods as method}
+			<Card data={method} />
+		{/each}
 	</div>
-	{tags[filter].value}
 </section>
 
 <style>

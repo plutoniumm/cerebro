@@ -4,9 +4,9 @@
 <script>
 </script>
 
-<nav class="p-abs ƒ p10">
-    <img width="44px" height="44px" src="/static/icon.svg" alt="Logo" />
-    <div class="fw1 p5">CEREBRO</div>
+<nav class="p-abs fade-down ƒ p10">
+    <img width="36px" height="36px" src="/icon.svg" alt="Logo" />
+    <div class="fw1">CEREBRO</div>
 </nav>
 
 <style>

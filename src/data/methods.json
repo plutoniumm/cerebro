@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Minto Pyramid",
+        "desc": "Make your communications more efficient & clear",
+        "image": "https://assets-us-01.kc-usercontent.com/c6e42f10-0ed4-0062-585c-b740aa1ad46c/fd3ae4af-5434-493c-979a-a3fbcf0da708/minto-pyramid-icon.png",
+        "tag": "comms",
+        "internal": {
+            "url": "",
+            "pg": ""
+        },
+        "external": {
+            "orig": "https://untools.co/minto-pyramid/",
+            "wiki": "wiki/MECE_principle",
+            "medium": "lessons-from-mckinsey/the-pyramid-principle-f0885dd3c5c7",
+            "github": "gera2ld/markmap"
+        }
+    }
+]

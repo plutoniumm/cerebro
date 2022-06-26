@@ -13,7 +13,7 @@
         value={i}
     />
     <label
-        class="rx5 fw5"
+        class="rx5 fw5 fade-down"
         for={tag.value.replaceAll(" ", "")}
         style="--col:{tag.color}"
     >

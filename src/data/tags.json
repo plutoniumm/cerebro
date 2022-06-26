@@ -1,0 +1,27 @@
+[
+    {
+        "id": "all",
+        "value": "Everything",
+        "color": "black"
+    },
+    {
+        "id": "sys_des",
+        "value": "System Design",
+        "color": "ui:blue"
+    },
+    {
+        "id": "decide",
+        "value": "Decision Tree",
+        "color": "ui:green"
+    },
+    {
+        "id": "solve",
+        "value": "Problem Solving",
+        "color": "ui:purple"
+    },
+    {
+        "id": "comms",
+        "value": "Communication",
+        "color": "ui:orange"
+    }
+]
